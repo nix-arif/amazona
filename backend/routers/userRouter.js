@@ -31,9 +31,8 @@ userRouter.post(
         });
         return;
       }
-    } else {
-      res.status(401).send({ message: "Invalid User Email or Password" });
     }
+    res.status(401).send({ message: "Invalid User Email or Password" });
   })
 );
 
