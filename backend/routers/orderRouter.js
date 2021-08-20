@@ -35,6 +35,7 @@ orderRouter.get(
   isAuth,
   expressAsyncHandler(async (req, res) => {
     const order = await Order.findById(req.params.id);
+    console.log(order);
     if (order) {
       res.send(order);
     } else {
